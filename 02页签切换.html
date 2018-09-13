@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		.box {
+			width: 200px;
+			height: 50px;
+			background-color: pink;
+			position: relative;
+		}
+
+		.mybox {
+			width: 500px;
+			height: 500px;
+			background-color: red;
+			position: absolute;
+			left: 0;
+			top: 50px;
+			display: none;
+		}
+
+		.box:hover .mybox {
+			display: block;
+		}
+
+
+		.container {
+			width: 500px;
+			height: 60px;
+			background-color: lightgreen;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.container button {
+			width: 250px;
+			height: 60px;
+			border: none;
+			float: left;
+			font-size: 18px;
+			font-weight: bold;
+			color: #444;
+			background-color: #ccc;
+		}
+
+		.container .active {
+			background-color: lightblue;
+		}
+		
+		.container div {
+			width: 500px;
+			height: 500px;
+			padding: 20px;
+			box-sizing: border-box; /*转为ie盒子，width和height的值包含了padding与border*/
+			position: absolute;
+			left: 0;
+			top: 60px;
+		}
+		.container .contentone {
+			background-color: red;
+			display: block;
+		}
+		.container .contenttwo {
+			background-color: green;
+			display: none;
+		}
+	</style>
+
+	<script type="text/javascript">
+		// 快速登录
+		function quick() {
+			var quickbtn = document.getElementById("quickbtn");
+			var twobtn = document.getElementById("twobtn");
+
+			var one = document.getElementById("one");
+			var two = document.getElementById("two");
+
+
+			quickbtn.style.backgroundColor = "lightblue";
+			twobtn.style.backgroundColor = "#ccc";
+
+			one.style.display = "block";
+			two.style.display = "none";
+		}
+
+		// 二维码登录
+		function two() {
+			var quickbtn = document.getElementById("quickbtn");
+			var twobtn = document.getElementById("twobtn");
+
+			var one = document.getElementById("one");
+			var two = document.getElementById("two");
+
+
+			quickbtn.style.backgroundColor = "#ccc";
+			twobtn.style.backgroundColor = "lightblue";
+
+			one.style.display = "none";
+			two.style.display = "block";
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<div class="box">
+		<div class="mybox"></div>
+	</div>
+
+	<div class="container">
+		<button id="quickbtn" onClick="quick();" class="active">快速登录</button>
+		<button id="twobtn" onClick="two();">二维码登录</button><br>
+
+		<div id="one" class="contentone">
+			<form action="#" method="get">
+				<input type="text" placeholder="用户名"><br><br>
+				<input type="password" placeholder="密码"><br><br>
+				<input type="submit" value="立即登录">
+			</form>
+		</div>
+
+		<div id="two" class="contenttwo">
+			<form action="#" method="get">
+
+				<img src="./img/two.jpg"><br>
+				
+				<input type="submit" value="立即登录">
+			</form>
+		</div>
+	</div>
+
+	
+</body>
+</html>

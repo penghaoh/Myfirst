@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			margin: 10px auto;
+			transition: all 3s;
+		}
+
+		.translate {
+			background-color: red;
+		}
+
+		.translate:hover {
+			transform: translate(-100px, 20px);
+		}
+
+
+		.rotate {
+			background-color: green;
+		}
+		.rotate:hover {
+			transform: rotate(30deg);
+			transform-origin: left top; /*指定旋转中心*/
+		}
+
+		.scale {
+			background-color: blue;
+		}
+		.scale:hover {
+			transform: scale(0.5, 0.5);
+			transform-origin: left bottom; 
+			/*指定缩放中心left、right、top、bottom、center、数值*/
+		}
+
+
+	</style>
+
+</head>
+<body>
+	
+	<div class="translate"></div>
+
+	<div class="rotate"></div>
+
+	<div class="scale"></div>
+	
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script type="text/javascript">
+		// 状态值，用来控制if语句的执行
+		flag = true;
+
+		// 定义一个函数，按钮点击时执行
+		function show() {
+			// 根据id获取对应的元素对象
+			var input = document.getElementById("myinput");
+			var btn = document.getElementById("mybtn");
+
+			if(flag) {
+				 //改变元素的属性值,使用"元素.属性名称"
+				input.type = "hidden";
+
+				// 改变元素嵌套的内容，使用"元素.innerHTML" 
+				btn.innerHTML = "显示";
+				flag = false;
+
+			} else {
+				input.type = "show";
+				btn.innerHTML = "隐藏";
+				flag = true;
+			}
+			
+		}
+
+	</script>
+
+</head>
+<body>
+	<!-- onClick用于监听按钮是否按下，如果按下会执行一个函数 -->
+	<button id="mybtn" onClick="show();">隐藏</button><br>
+
+	<input id="myinput" type="show" value="张三">
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="./css/email.css">
+
+</head>
+<body>
+
+	<div class="email center">
+		<div class="title center">
+			<button class="select">注册字母邮箱</button>
+			<button>注册手机号码邮箱</button>
+			<button>注册VIP邮箱</button>
+		</div>
+
+		<div class="address center">
+			<div class="txt">
+				<span class="star">*</span>&nbsp;邮件地址
+			</div>
+			<input class="short" type="text">
+			&nbsp;@&nbsp;
+			<select>
+				<option checked>163.com</option>
+				<option>126.com</option>
+				<option>yeah.net</option>
+			</select><br>
+			<p class="desc">6~18个字符，可使用字母、数字、下划线，需以字母开头</p>
+		</div>
+
+		<div class="pwd center">
+			<div class="txt">
+				<span class="star">*</span>&nbsp;
+				密码
+			</div>
+			<input type="password" class="long">
+			<p class="desc">6~16个字符，区分大小写</p>
+		</div>
+
+		<div class="again center">
+			<div class="txt">
+				<span class="star">*</span>&nbsp;
+				确认密码
+			</div>
+			<input type="password" class="long"></input>
+			<p class="desc">请再次填写密码</p>
+		</div>
+
+		<div class="phone center">
+			<div class="txt">
+				<span class="star">*</span>&nbsp;
+				手机号码
+			</div>
+			<input type="text" class="long" value="+86"></input>
+			<p class="desc">忘记密码时，可以通过该手机号码快速找回密码</p>
+		</div>
+
+		<div class="verrify center">
+			<div class="txt">
+				<span class="star">*</span>&nbsp;
+				验证码
+			</div>
+
+			<div class="left">
+				<input type="text" class="short"></input>
+				<p class="desc">请填写图片中的字符，不区分大小写</p>
+				<button>免费获取验证码</button>
+			</div>
+			<div class="right">
+				<img src="./img/call.jpg"><br>
+				<a href="#">看不清楚？换张图片</a>
+			</div>
+		</div>
+
+		
+		<div class="message center">
+			<div class="txt">
+				<span class="star">*</span>&nbsp;
+				短信验证码
+			</div>
+			<input type="text" class="long">
+			<p class="desc">请查收手机短信，并填写短信中的验证码</p>
+		</div>
+
+		<input type="checkbox" class="rule" checked> 
+		<span class="agree">
+			同意<a href="#">"服务条款"</a>和<a href="#">"隐私权相关政策"</a>
+		</span><br>
+
+		<input class="regist" type="submit" value="立即注册">
+
+	</div>
+	
+</body>
+</html>

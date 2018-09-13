@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		div {
+			width: 10px;
+			height: 100px;
+			background-color: red;
+			transition: width 2s;
+			transition-delay: 5s; /*过渡延迟5s后才执行*/
+		}
+		div:hover {
+			width: 100px;
+		}
+
+		span {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			transition: all 2s; /*设置需要过渡的样式，all表示所有的样式都要过渡，时间是2s*/
+		}
+
+		span:hover {
+			width: 200px; /*width从100px变为200px*/
+			height: 300px; /*height从100px变为300px*/
+			transform: translate(50px, 0); /*平移*/
+		}
+
+	</style>
+</head>
+<body>
+
+	<div></div>
+
+	<span></span>
+	
+</body>
+</html>
